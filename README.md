@@ -24,6 +24,11 @@ Your app is ready to be deployed!
 
 ### dependencies
 - [react](https://reactjs.org/)
+- [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
+- [Material-UI](https://material-ui.com/)
+- [rxjs](https://rxjs.dev/guide/overview/)
+- [observable-hooks](https://observable-hooks.js.org/)
+- [prettier](https://prettier.io/)
 
 ### Thanks to
 - [Create React App](https://github.com/facebook/create-react-app).
