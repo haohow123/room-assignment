@@ -4,11 +4,12 @@ import { createMuiTheme } from "@material-ui/core/styles";
 // A custom theme for this app
 const theme = createMuiTheme({
   typography: {
-    fontFamily: ["Noto Sans", "Noto Sans TC"].join(","),
+    fontFamily: ["Noto Sans TC", "Noto Sans"].join(","),
+    body1: { fontWeight: 500 },
   },
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#1E9FD2",
     },
     error: {
       main: red.A400,

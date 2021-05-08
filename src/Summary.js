@@ -3,11 +3,12 @@ import Proptypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
     fontSize: "20px",
     lineHeight: "28px",
+    marginBottom: theme.spacing(2)
   },
 }));
 

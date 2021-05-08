@@ -1,6 +1,6 @@
 # Room Assignment
 
-The homework for interview 
+The homework for interview
 
 ## Available Scripts
 
@@ -23,6 +23,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ### dependencies
+
 - [react](https://reactjs.org/)
 - [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
 - [Material-UI](https://material-ui.com/)
@@ -31,4 +32,6 @@ Your app is ready to be deployed!
 - [prettier](https://prettier.io/)
 
 ### Thanks to
+
 - [Create React App](https://github.com/facebook/create-react-app).
+- [react-hook-form](https://react-hook-form.com/)

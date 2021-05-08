@@ -1,11 +1,10 @@
-import Proptypes from "prop-types";
+import { useEffect, useState } from "react";
 
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Box from "@material-ui/core/Box";
 
-import Room from "./Room";
+import Rooms from "./Rooms";
 import Summary from "./Summary";
-import { useEffect, useState } from "react";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,12 +24,12 @@ function App() {
   const [people, setPeople] = useState(0);
   const [rooms, setRooms] = useState([]);
   useEffect(() => {
-    console.log('mounted and callApi to get people and rooms')
-    setPeople(3)
+    console.log("mounted and callApi to get people and rooms");
+    setPeople(3);
     setRooms([
-      { min: 2, max: 2 },
-      { min: 1, max: 1 },
-    ])
+      { roomId: '202101', min: 2, max: 2 },
+      { roomId: '202102', min: 1, max: 1 },
+    ]);
   }, []);
   const handleDistribution = (rooms) => {
     //call api
@@ -47,18 +46,10 @@ function App() {
         p={2}
       >
         <Summary people={people} roomsAmount={rooms.length} />
-        <Room />
+        <Rooms rooms={rooms} handleDistribution={handleDistribution}/>
       </Box>
     </div>
   );
 }
-
-App.propTypes = {
-  people: Proptypes.number,
-  rooms: Proptypes.arrayOf(
-    Proptypes.shape({ min: Proptypes.number, max: Proptypes.number })
-  ),
-  handleDistribution: Proptypes.func,
-};
 
 export default App;
