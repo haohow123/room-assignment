@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => {
     root: {
       display: "block",
       position: "relative",
-      overflowY: "hidden",
-      width: "20px",
+      overflow: "hidden",
+      minWidth: "20px",
       "& > *": {
         position: "absolute",
         top: 0,
