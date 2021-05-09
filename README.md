@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 
 ### `npm run test`
 
-Runs the test watcher in an interactive mode. 
+Runs the test watcher in an interactive mode.
 By default, runs tests related to files changed since the last commit.
 
 ### `npm run build`
@@ -32,11 +32,11 @@ Your app is ready to be deployed!
 - [react](https://reactjs.org/)
 - [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
 - [Material-UI](https://material-ui.com/)
-- [rxjs](https://rxjs.dev/guide/overview/)
-- [observable-hooks](https://observable-hooks.js.org/)
 - [prettier](https://prettier.io/)
 
 ### Thanks to
 
 - [Create React App](https://github.com/facebook/create-react-app).
 - [react-hook-form](https://react-hook-form.com/)
+- [rxjs](https://rxjs.dev/guide/overview/)
+- [observable-hooks](https://observable-hooks.js.org/)
