@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useReducer, useState } from "react";
+import { useCallback, useReducer, useState } from "react";
+import PropTypes from "prop-types";
 
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Box from "@material-ui/core/Box";
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   helperText: {
     position: "absolute",
-    marginTop:theme.spacing(-2)
+    marginTop: theme.spacing(-2),
   },
 }));
 
@@ -36,31 +37,20 @@ function helperTextReducer(state, action) {
   }
 }
 
-function App() {
+function App({ rooms, people }) {
   const classes = useStyles();
-  const [people, setPeople] = useState(0);
-  const [rooms, setRooms] = useState([]);
   const [error, setError] = useState(false);
   const [helperText, helperTextDispatch] = useReducer(helperTextReducer, "");
   const [isDirty, setIsDirty] = useState(false);
-  useEffect(() => {
-    console.log("mounted and callApi to get people and rooms");
-    setPeople(4);
-    setRooms([
-      { roomId: "202101", min: 1, max: 4 },
-      { roomId: "202102", min: 0, max: 4 },
-    ]);
-  }, []);
   const validateForm = useCallback(
     (roomsData) => {
       let result = false;
 
       //check room's people amount fit all people
-      console.log(roomsData);
-      const roomsPeopleAmount = roomsData.reduce((acc, { adult, child }) => {
-        console.log(adult, child);
-        return acc + adult + child;
-      }, 0);
+      const roomsPeopleAmount = roomsData.reduce(
+        (acc, { adult, child }) => acc + adult + child,
+        0
+      );
       if (roomsPeopleAmount === people) {
         result = true;
       }
@@ -100,7 +90,6 @@ function App() {
         );
         //hint after isDirty
         if (isDirty) {
-          console.log(roomsPeopleAmount, people);
           if (roomsPeopleAmount > people) {
             helperTextDispatch({ type: "overMax" });
           } else {
@@ -136,5 +125,16 @@ function App() {
     </div>
   );
 }
+
+App.prototype = {
+  people: PropTypes.number.isRequired,
+  rooms: PropTypes.arrayOf(
+    PropTypes.shape({
+      roomId: PropTypes.string.isRequired,
+      min: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 
 export default App;

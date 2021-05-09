@@ -91,6 +91,7 @@ function NumberInput(props) {
     <Box>
       <Box display={"flex"}>
         <Button
+          name="minus-value"
           className={clsx(classes.button)}
           variant="outlined"
           color="primary"
@@ -106,6 +107,7 @@ function NumberInput(props) {
         {/*number will appear 01,02,03 problem*/}
         <input
           type="text"
+          aria-label="number-value"
           className={clsx(classes.input, error && classes.error)}
           min={0}
           max={props.max}
@@ -114,7 +116,9 @@ function NumberInput(props) {
           value={props.value}
         />
         <Button
+          name="add-number"
           className={clsx(classes.button)}
+          aria-label="add-value"
           variant="outlined"
           color="primary"
           onClick={() => props.onClick(props.value + props.step)}

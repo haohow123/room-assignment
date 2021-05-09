@@ -8,7 +8,10 @@ import theme from "./theme";
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <App />
+    <App people={4} rooms={[
+        { roomId: "202101", min: 1, max: 4 },
+        { roomId: "202102", min: 0, max: 4 },
+    ]}/>
   </ThemeProvider>,
   document.getElementById("root")
 );
