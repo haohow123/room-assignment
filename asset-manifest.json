@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/room-assignment/static/js/main.bc65b747.chunk.js",
+    "main.js.map": "/room-assignment/static/js/main.bc65b747.chunk.js.map",
+    "runtime-main.js": "/room-assignment/static/js/runtime-main.5344f5c3.js",
+    "runtime-main.js.map": "/room-assignment/static/js/runtime-main.5344f5c3.js.map",
+    "static/js/2.c1ae90c3.chunk.js": "/room-assignment/static/js/2.c1ae90c3.chunk.js",
+    "static/js/2.c1ae90c3.chunk.js.map": "/room-assignment/static/js/2.c1ae90c3.chunk.js.map",
+    "static/js/3.23a04cf6.chunk.js": "/room-assignment/static/js/3.23a04cf6.chunk.js",
+    "static/js/3.23a04cf6.chunk.js.map": "/room-assignment/static/js/3.23a04cf6.chunk.js.map",
+    "index.html": "/room-assignment/index.html",
+    "static/js/2.c1ae90c3.chunk.js.LICENSE.txt": "/room-assignment/static/js/2.c1ae90c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5344f5c3.js",
+    "static/js/2.c1ae90c3.chunk.js",
+    "static/js/main.bc65b747.chunk.js"
+  ]
+}
