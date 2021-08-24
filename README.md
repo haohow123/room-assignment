@@ -1,6 +1,7 @@
 # Room Assignment
 
 The homework for interview
+[Demo](https://haohow123.github.io/room-assignment/)
 
 ## Available Scripts
 
